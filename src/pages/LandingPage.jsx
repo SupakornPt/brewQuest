@@ -15,6 +15,7 @@ const LandingPage = () => {
     };
 
     const setNameCustomerStore = useNameStore((state) => state.setNameCustomerStore)
+    const setLanguage = useNameStore((state) => state.setLanguage)
     const navigate = useNavigate()
 
     const [nameCustomer, setNameCustomer] = useState("")
@@ -28,16 +29,24 @@ const LandingPage = () => {
         setNameCustomer(`${e.target.value}`)
     }
 
-    console.log('nameCustomer', nameCustomer)
 
+    const handleOnTh = () => {
+        setLanguage(false)
+        changeLanguage("th")
+    }
+
+    const handleOnEn = () => {
+        setLanguage(true)
+        changeLanguage("en")
+    }
 
     return (
         <div className="flex flex-col justify-between items-center h-screen bg-[#E8E5E2] font-prompt ">
             {/* Header */}
             <div className="flex flex-row w-full pr-[24px] font-prompt text-[16px] gap-[10px] justify-end mt-[24px] mr-[24px]">
-                <div><button onClick={() => changeLanguage("th")}>TH</button></div>
+                <div><button onClick={handleOnTh}>TH</button></div>
                 <div>|</div>
-                <div><button onClick={() => changeLanguage("en")}>EN</button></div>
+                <div><button onClick={handleOnEn}>EN</button></div>
             </div>
             {/* CONTENT */}
             <div className="flex flex-col gap-[40px] items-center px-[32px]">

@@ -17,6 +17,7 @@ const Result = () => {
 
 
     console.log('shareUrl', shareUrl)
+    const languageEn = useNameStore((state) => state.languageEn)
 
 
     const getMenu = () => {
@@ -48,10 +49,15 @@ const Result = () => {
     return (
         <div className="flex flex-col font-prompt items-center h-screen bg-[#E8E5E2] justify-center px-[32px]">
             <div className="flex flex-col gap-[56px] items-center ">
-                <div><img src={`${result[0]?.sub[index]?.picture}`} alt="pic" /></div>
+                <div className="w-[400px]"><img src={`${result[0]?.sub[index]?.picture}`} alt="pic" className="w-full" /></div>
                 <div className="font-bold text-[24px]">{t("result")}</div>
                 <div className="font-bold text-[18px]">
-                    "Traits: {result[0]?.descriptionEN}.
+                    {
+                        languageEn
+                            ? `Traits: ${result[0]?.descriptionEN}.`
+                            : `บุคลิก: ${result[0]?.descriptionTH}.`
+
+                    }
                 </div>
                 <div className="font-bold text-[18px]"  >
                     {nameCustomerStore} {t("suggest")} {result[0]?.sub[index]?.name}."
