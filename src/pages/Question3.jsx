@@ -29,7 +29,7 @@ const Question1 = () => {
             <div className="flex flex-row justify-between w-full ">
                 <QuestionNav count={"3"} />
             </div>
-            <div className="w-[200px]"><img src="/picQuestion/pirate.png" alt="pic" className="w-full" /></div>
+            <div className="w-[250px]"><img src="/picQuestion/pirate.png" alt="pic" className="w-full" /></div>
             <div className="font-bold text-questionText text-[24px]">{t("question3")}</div>
             <div className="flex flex-col gap-[32px]">
                 {
