@@ -11,7 +11,7 @@ const Result = () => {
 
     const nameCustomerStore = useNameStore((state) => state.nameCustomerStore)
     const answerStore = useAnswerStore((state) => state.answerStore)
-    const shareUrl = window.location.href
+    const shareUrl = "https://brew-quest.vercel.app/"
     const [imageUrl, setImageUrl] = useState(null);
     // const captureRef = useRef(null);
 
