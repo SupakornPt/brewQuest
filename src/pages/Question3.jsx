@@ -1,0 +1,44 @@
+import { useNavigate } from "react-router-dom"
+import Answer from "../components/Answer"
+import QuestionNav from "../components/QuestionNav"
+import useAnswerStore from "../store/answerStore"
+import { useTranslation } from "react-i18next"
+
+const Question1 = () => {
+    const { t } = useTranslation();
+
+    const setAnswerStore = useAnswerStore((state) => state.setAnswerStore)
+
+    const answer = [
+        { text: `${t("answer31")}`, value: "T" },
+        { text: `${t("answer32")}`, value: "F" },
+        { text: `${t("answer33")}`, value: "T" },
+        { text: `${t("answer34")}`, value: "F" }
+    ]
+
+    const navigate = useNavigate()
+
+    const handleOnAnswer = (e) => {
+        setAnswerStore(e.target.value)
+        navigate("/question4")
+        return
+    }
+
+    return (
+        <div className="flex flex-col font-prompt gap-[56px] justify-center items-center h-screen bg-[#E8E5E2]">
+            <div className="flex flex-row justify-between w-full px-[32px] py-[40px]">
+                <QuestionNav count={"3"} />
+            </div>
+            <div className="w-[400px]"><img src="/picQuestion/pirate.png" alt="pic" className="w-full" /></div>
+            <div className="font-bold text-questionText">{t("question3")}</div>
+            <div className="flex flex-col gap-[32px]">
+                {
+                    answer.map((answer, index) => {
+                        return <Answer answer={answer.text} value={answer.value} key={index} action={handleOnAnswer} />
+                    })
+                }
+            </div>
+        </div>
+    )
+}
+export default Question1
