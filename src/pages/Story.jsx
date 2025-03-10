@@ -18,10 +18,12 @@ const Story = () => {
     }
     return (
         <div className="flex flex-col font-prompt items-center h-screen bg-[#E8E5E2] py-[32px] justify-center">
-            <div className="flex flex-col gap-[48px]">
+            <div className="flex flex-col gap-[32px]">
                 <div className="w-[350px]"><img src="/picQuestion/ReCoffee.png" alt="pic" className="w-full" /></div>
-                <div className="text-[24px] ">{t("hello")} {nameCustomerStore}</div>
-                <div className="text-[18px] text-answerText w-[329px]">{t("story")}</div>
+                <div className="flex flex-col gap-[8px]">
+                    <div className="text-[24px] ">{t("hello")} {nameCustomerStore}</div>
+                    <div className="text-[18px] text-answerText w-[329px]">{t("story")}</div>
+                </div>
             </div>
 
             <div className="absolute bottom-0 mb-[56px]">
