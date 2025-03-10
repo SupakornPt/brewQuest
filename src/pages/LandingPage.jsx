@@ -34,7 +34,7 @@ const LandingPage = () => {
     return (
         <div className="flex flex-col justify-between items-center h-screen bg-[#E8E5E2] font-prompt ">
             {/* Header */}
-            <div className="flex flex-row w-full pr-[24px] font-prompt text-[24px] gap-[10px] justify-end mt-[24px] mr-[24px]">
+            <div className="flex flex-row w-full pr-[24px] font-prompt text-[16px] gap-[10px] justify-end mt-[24px] mr-[24px]">
                 <div><button onClick={() => changeLanguage("th")}>TH</button></div>
                 <div>|</div>
                 <div><button onClick={() => changeLanguage("en")}>EN</button></div>
