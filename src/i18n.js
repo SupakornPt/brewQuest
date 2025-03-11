@@ -30,7 +30,7 @@ const resources = {
             "answer33": "Use physical abilities to escape with strength.",
             "answer34": "Deceive the pirates into fighting among themselves and escape during the confusion.",
             "question4": "You must solve a puzzle to unlock the treasure door. What will you do?",
-            "answer41": "Analyze all the information carefully to be sure.",
+            "answer41": "Analyze all the information carefully.",
             "answer42": "Try and fail, then find a new way if needed.",
             "answer43": "Use creativity to try new ways of solving the puzzle.",
             "answer44": "Divide tasks so the team can solve the puzzle together.",

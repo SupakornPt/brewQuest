@@ -30,7 +30,7 @@ const Question4 = ({ setDirection }) => {
             <div className="flex flex-row justify-between w-full  ">
                 <QuestionNav count={"4"} setDirection={setDirection} />
             </div>
-            <div className="w-[300px]"><img src="/picQuestion/door.png" alt="pic" className="w-full" /></div>
+            <div className="w-[250px]"><img src="/picQuestion/door.png" alt="pic" className="w-full" /></div>
             <div className="font-bold text-questionText text-[20px]">{t("question4")}</div>
             <div className="flex flex-col gap-[16px]">
                 {
