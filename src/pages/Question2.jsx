@@ -31,8 +31,8 @@ const Question2 = ({ setDirection }) => {
                 <QuestionNav count={"2"} setDirection={setDirection} />
             </div>
             <div className="w-[200px]"><img src="/picQuestion/twoways.png" alt="pic" className="w-full" /></div>
-            <div className="font-bold text-questionText text-[24px]">{t("question2")}</div>
-            <div className="flex flex-col gap-[32px]">
+            <div className="font-bold text-questionText text-[20px]">{t("question2")}</div>
+            <div className="flex flex-col gap-[16px]">
                 {
                     answer.map((answer, index) => {
                         return <Answer answer={answer.text} value={answer.value} key={index} action={handleOnAnswer} />
