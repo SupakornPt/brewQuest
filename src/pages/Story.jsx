@@ -4,7 +4,7 @@ import useNameStore from "../store/NameStore"
 import useAnswerStore from "../store/answerStore"
 import { useTranslation } from "react-i18next"
 
-const Story = () => {
+const Story = ({ setDirection }) => {
     const { t } = useTranslation();
     const nameCustomerStore = useNameStore((state) => state.nameCustomerStore)
     const clearAnswerStore = useAnswerStore((state) => state.clearAnswerStore)
@@ -13,6 +13,7 @@ const Story = () => {
     const navigate = useNavigate()
 
     const handleOnButton = () => {
+        setDirection(1)
         clearAnswerStore()
         navigate("/question1")
     }

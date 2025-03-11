@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom"
 import useAnswerStore from "../store/answerStore"
 import { useTranslation } from "react-i18next";
 
-const QuestionNav = ({ count }) => {
+const QuestionNav = ({ count, setDirection }) => {
     const { t } = useTranslation();
 
     const removeLastAnswer = useAnswerStore((state) => state.removeLastAnswer)
@@ -10,6 +10,7 @@ const QuestionNav = ({ count }) => {
     const navigate = useNavigate()
 
     const handleOnBack = () => {
+        setDirection(-1)
         removeLastAnswer()
         navigate(-1)
     }

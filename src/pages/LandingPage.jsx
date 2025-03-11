@@ -5,7 +5,7 @@ import useNameStore from "../store/NameStore"
 import { useTranslation } from "react-i18next";
 import "../../src/i18n"
 
-const LandingPage = () => {
+const LandingPage = ({ setDirection }) => {
 
     const { t, i18n } = useTranslation();
 
@@ -21,6 +21,7 @@ const LandingPage = () => {
     const [nameCustomer, setNameCustomer] = useState("")
 
     const handleOnButton = () => {
+        setDirection(1)
         setNameCustomerStore(nameCustomer)
         navigate("/story")
     }

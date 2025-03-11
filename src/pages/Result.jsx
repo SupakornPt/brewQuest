@@ -42,13 +42,13 @@ const Result = () => {
     console.log('index', index)
     return (
 
-        <div className="flex flex-col font-prompt items-center h-dvh bg-[#E8E5E2] justify-center px-[32px]">
+        <div className="flex flex-col font-prompt items-center h-dvh bg-[#E8E5E2] justify-center px-[32px] py-[24px]">
             <div className="flex flex-col gap-[24px] items-center ">
                 <div className="w-[300px]"><img src={`${result[0]?.sub[index]?.picture}`} alt="pic" className="w-full" /></div>
                 <div className="font-bold text-[24px]">{t("result")}</div>
                 <div className="font-bold text-[18px]">
                     {
-                        languageEn
+                        t("trig") == "en"
                             ? `Traits: ${result[0]?.descriptionEN}.`
                             : `บุคลิก: ${result[0]?.descriptionTH}.`
 
@@ -61,7 +61,7 @@ const Result = () => {
             </div>
 
 
-            <div className="bg-button font-bold text-[24px] text-white rounded-[10px] py-[16px] px-[24px] font-prompt mt-[56px] ">
+            <div className="bg-button font-bold text-[24px] text-white rounded-[10px] py-[16px] px-[24px] font-prompt mt-[40px] ">
                 <FacebookShareButton quote="Hello" hashtag="#RE_Coffee" url={shareUrl} className="flex flex-row items-center gap-[8px]">
                     <FacebookIcon size="36px" round />
                     <div>Facebook share</div>

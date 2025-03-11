@@ -4,7 +4,7 @@ import QuestionNav from "../components/QuestionNav"
 import useAnswerStore from "../store/answerStore"
 import { useTranslation } from "react-i18next"
 
-const Question1 = () => {
+const Question2 = ({ setDirection }) => {
     const { t } = useTranslation();
 
     const setAnswerStore = useAnswerStore((state) => state.setAnswerStore)
@@ -19,6 +19,7 @@ const Question1 = () => {
     const navigate = useNavigate()
 
     const handleOnAnswer = (e) => {
+        setDirection(1)
         setAnswerStore(e.target.value)
         navigate("/question3")
         return
@@ -27,7 +28,7 @@ const Question1 = () => {
     return (
         <div className="flex flex-col font-prompt py-[24px] justify-between items-center h-dvh bg-[#E8E5E2] px-[32px]">
             <div className="flex flex-row justify-between w-full  ">
-                <QuestionNav count={"2"} />
+                <QuestionNav count={"2"} setDirection={setDirection} />
             </div>
             <div className="w-[200px]"><img src="/picQuestion/twoways.png" alt="pic" className="w-full" /></div>
             <div className="font-bold text-questionText text-[24px]">{t("question2")}</div>
@@ -41,4 +42,4 @@ const Question1 = () => {
         </div>
     )
 }
-export default Question1
+export default Question2
