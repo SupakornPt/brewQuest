@@ -13,7 +13,7 @@ const Result = () => {
     const answerStore = useAnswerStore((state) => state.answerStore)
     const shareUrl = "https://brew-quest.vercel.app/"
     const [imageUrl, setImageUrl] = useState(null);
-    // const captureRef = useRef(null);
+
 
 
     console.log('shareUrl', shareUrl)
@@ -34,13 +34,6 @@ const Result = () => {
 
     const index = randomIndexMenu()
 
-    // const captureScreenshot = async () => {
-    //     if (captureRef.current) {
-    //         const canvas = await html2canvas(captureRef.current);
-    //         const imgData = canvas.toDataURL("image/png"); // แปลงเป็น Base64
-    //         setImageUrl(imgData);
-    //     }
-    // };
 
 
     console.log('result', result)
@@ -48,7 +41,7 @@ const Result = () => {
     console.log('index', index)
     return (
         <div className="flex flex-col font-prompt items-center h-screen bg-[#E8E5E2] justify-center px-[32px]">
-            <div className="flex flex-col gap-[56px] items-center ">
+            <div className="flex flex-col gap-[24px] items-center ">
                 <div className="w-[300px]"><img src={`${result[0]?.sub[index]?.picture}`} alt="pic" className="w-full" /></div>
                 <div className="font-bold text-[24px]">{t("result")}</div>
                 <div className="font-bold text-[18px]">
@@ -60,7 +53,7 @@ const Result = () => {
                     }
                 </div>
                 <div className="font-bold text-[18px]"  >
-                    {nameCustomerStore} {t("suggest")} {result[0]?.sub[index]?.name}."
+                    {nameCustomerStore}{t("suggest")} {result[0]?.sub[index]?.name}"
                 </div>
 
             </div>

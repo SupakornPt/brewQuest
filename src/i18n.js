@@ -35,7 +35,7 @@ const resources = {
             "answer43": "Use creativity to try new ways of solving the puzzle.",
             "answer44": "Divide tasks so the team can solve the puzzle together.",
             "result": "Your adventure is complete!",
-            "suggest": "are best matched with a"
+            "suggest": ", you are best matched with a"
 
         }
     },
@@ -70,7 +70,7 @@ const resources = {
             "answer43": "ใช้วิธีสร้างสรรค์ ทดลองแก้ปริศนาแบบใหม่ๆ",
             "answer44": "แบ่งหน้าที่ให้ทีมช่วยกันแก้ปริศนา",
             "result": "การผจญภัยของคุณสำเร็จแล้ว",
-            "suggest": "เหมาะกับเมนู"
+            "suggest": ", คุณเหมาะกับเมนู"
         }
     }
 };
