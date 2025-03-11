@@ -96,7 +96,7 @@ const AnimatedRoutes = () => {
     return (
         <AnimatePresence mode="sync">
             <Routes location={location} key={location.pathname}>
-                <Route path="/" element={<PageTransition direction={direction}><LandingPage setDirection={setDirection} /></PageTransition>} />
+                <Route path="/" element={<LandingPage setDirection={setDirection} />} />
                 <Route path="/story" element={<PageTransition direction={direction}><Story setDirection={setDirection} /></PageTransition>} />
                 <Route path="/question1" element={<PageTransition direction={direction}><Question1 setDirection={setDirection} /></PageTransition>} />
                 <Route path="/question2" element={<PageTransition direction={direction}><Question2 setDirection={setDirection} /></PageTransition>} />
