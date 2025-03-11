@@ -25,7 +25,7 @@ const Question1 = () => {
     }
 
     return (
-        <div className="flex flex-col font-prompt py-[24px] justify-between items-center h-screen bg-[#E8E5E2] px-[32px]">
+        <div className="flex flex-col font-prompt py-[24px] justify-between items-center h-dvh bg-[#E8E5E2] px-[32px]">
             <div className="flex flex-row justify-between w-full  ">
                 <QuestionNav count={"2"} />
             </div>
